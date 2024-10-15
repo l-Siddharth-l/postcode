@@ -1,4 +1,4 @@
 django
 djangorestframework
-selenium
+playwright
 bs4

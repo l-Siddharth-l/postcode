@@ -24,6 +24,7 @@ fi
 # Install dependencies
 $PYTHON -m pip install --upgrade pip
 $PYTHON -m pip install -r requirements.txt
+$PYTHON -m playwright install
 
 # Run migrations
 $PYTHON manage.py migrate
