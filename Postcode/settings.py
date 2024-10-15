@@ -69,16 +69,28 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "Postcode.wsgi.application"
+WSGI_APPLICATION = "Postcode.wsgi.app"
 
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',       # Using PostgreSQL as the database engine
+        'NAME': 'postgres',                              # The database name
+        'USER': 'postgres.ycdhugtadteuliqkrjxw',         # The database user
+        'PASSWORD': 'Siddharth@6307862150',              # The password (replace [YOUR-PASSWORD] with the actual password)
+        'HOST': 'aws-0-ap-south-1.pooler.supabase.com',  # The host
+        'PORT': '6543',                                  # The port number
+        'CONN_MAX_AGE': 600,
     }
 }
 
